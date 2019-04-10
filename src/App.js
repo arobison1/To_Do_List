@@ -12,6 +12,8 @@ class App extends Component {
     };
 
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
+
   }
 
   addItem(e) {
@@ -32,6 +34,16 @@ class App extends Component {
     e.preventDefault();
   }
 
+  deleteItem(key) {
+    var filteredItems = this.state.items.filter(function (item) {
+      return (item.key !== key);
+    });
+
+    this.setState({
+      items: filteredItems
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -46,7 +58,7 @@ class App extends Component {
           <input ref={(a) => this._inputElement = a}></input>
           <button type="submit">Add</button>
         </form>
-        <TodoItems entries={this.state.items}/>
+        <TodoItems entries={this.state.items} delete={this.deleteItem}/>
       </div>
     );
   }

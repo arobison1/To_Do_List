@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #61dafb;
 }
 
 .App-logo {
@@ -34,3 +35,64 @@
     transform: rotate(360deg);
   }
 }
+
+form {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFF;
+  border-radius: 4px;
+  width: 60%;
+}
+
+form button {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  margin-right: 0px;
+  background-color: #282c34;
+  color: #FFF;
+  border: 2px solid #282c34;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #FFF;
+  border: 2px solid #FFF;
+  cursor: pointer;
+  color: #282c34;
+  border-radius: 4px;
+}
+
+.theList {
+  list-style: none;
+  padding-left: 0;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.theList li {
+  color: #333;
+  background-color: rgba(255,255,255,.5);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: background-color .2s ease-out;
+}
+
+.theList li:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+
+ul.theList {
+  padding: 0;
+}
+
+
